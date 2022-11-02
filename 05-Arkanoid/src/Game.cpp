@@ -168,6 +168,10 @@ void Game::update(sf::Clock& clock, sf::Time& totalElapsed)
 			return brick.IsBroken;
 		}
 	), _bricks.end());
+	if (_bricks.empty())
+	{
+		IsStarted = false;
+	}
 
 }
 
